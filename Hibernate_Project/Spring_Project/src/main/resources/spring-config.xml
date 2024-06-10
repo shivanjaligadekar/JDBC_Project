@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="greet" class="example.spring.core.HelloService"></bean>
+
+	<bean id="greet2" class="example.spring.core.WelcomeService"></bean>
+
+	<bean id="greet3" class="example.spring.core.HelloService"></bean>
+
+	<bean  id="greet4" class="example.spring.core.CricketMatchResult">
+	<property name="winningTeam" value="India"></property>
+	<property name="loseingTeam" value="pak"></property>
+	<property name="winningMargin" value="6"></property>
+	<property name="winningType" value="run"></property>
+	
+	</bean>
+
+	<bean id="greet6" class="example.spring.core.CricketMatchResult">
+		<constructor-arg value="Australia" index="1" />
+		<constructor-arg value="England" index="2"/>
+		<constructor-arg value="9" index="0"/>
+		<constructor-arg value="Run" index="3"/>
+	</bean>
+
+
+
+</beans>
